@@ -1,4 +1,4 @@
-import { color, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { FaReact, FaJs, FaHtml5, FaCss3, FaGitAlt, FaGithub, FaPython, FaDatabase, FaJava, FaFigma } from 'react-icons/fa'
 const skills = [
   { name: 'Python', icon: FaPython, color: 'text-green-400' },

@@ -1,15 +1,19 @@
-import { Link } from 'react-scroll'
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 
-const navItems = ['home', 'about', 'projects', 'experience', 'contact']
+const navItems = ['home', 'about', 'projects', 'experience', 'contact'];
 
-export default function Header({ currentSection, setCurrentSection }) {
-  const [isOpen, setIsOpen] = useState(false)
+interface HeaderProps {
+  currentSection: string;
+  setCurrentSection: (section: string) => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ setCurrentSection }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header className="fixed w-full bg-white bg-opacity-90 z-50">
@@ -94,5 +98,7 @@ export default function Header({ currentSection, setCurrentSection }) {
         )}
       </nav>
     </header>
-  )
-}
+  );
+};
+
+export default Header;
