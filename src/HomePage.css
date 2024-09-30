@@ -1,0 +1,15 @@
+.fade-in-active {
+    opacity: 1 !important;
+}
+
+.draw-svg-path {
+    stroke-dasharray: 3820.97, 3820.97;
+    stroke-dashoffset: 3820.97;
+    animation: drawHi 3s linear forwards;
+    transform: scale(1.2); 
+}
+@keyframes drawHi {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
